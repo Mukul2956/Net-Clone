@@ -67,9 +67,6 @@ netClone/
 
 ## Screenshots
 
-<<<<<<< HEAD
-> _Add screenshots of your Home, Movies, and My List pages here_
-=======
 ### Home Page
 ![Home Page](./public/screenshots/home.png)
 
