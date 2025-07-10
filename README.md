@@ -65,17 +65,16 @@ netClone/
 ## Screenshots
 
 ### Home Page
-![Home Page](./public/screenshots/home.png)
+![Home Page](./public/Screenshots/Home.png)
 
 ### Movies Page
-![Movies Page](./public/screenshots/movies.png)
+![Movies Page](./public/Screenshots/Movies.png)
 
 ### My List Page
-![My List Page](./public/screenshots/mylist.png)
->>>>>>> 3edac11 (Update components and pages, add screenshots)
+![My List Page](./public/Screenshots/MyList.png)
 
 ### Login Page
-![Login Page](./public/screenshots/login.png)
+![Login Page](./public/Screenshots/Login.png)
 
 ## Credits
 - [TMDB API](https://www.themoviedb.org/documentation/api)
