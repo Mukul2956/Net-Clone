@@ -7,6 +7,8 @@ import TitleCards from '../../components/TitleCards/TitleCards'
 import Footer from '../../components/Footer/Footer'
 import { useNavigate } from 'react-router-dom'
 
+const TMDB_BEARER = import.meta.env.VITE_TMDB_BEARER;
+
 const Home = () => {
   const [featured, setFeatured] = useState(null);
   const [showModal, setShowModal] = useState(false);
@@ -18,7 +20,7 @@ const Home = () => {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYWJhZjYzOGNjMWNiODIwYjEwNmQ3OTRhZDAyZTgyOCIsIm5iZiI6MTc1MjA3NTYwMS4xMTYsInN1YiI6IjY2NmU4ZDUxYTA5ZjRmMDYwZjZlOTI4NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HYfcIGONBWkXGqrNEwHn42At7opgJXOp4Gb6dLpTGSk'
+        Authorization: `Bearer ${TMDB_BEARER}`
       }
     })
       .then(res => res.json())

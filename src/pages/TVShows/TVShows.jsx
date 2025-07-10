@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import '../ThemedPage.css';
 import { useLocation } from 'react-router-dom';
 
+const TMDB_BEARER = import.meta.env.VITE_TMDB_BEARER;
+
 const TVShows = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -22,7 +24,7 @@ const TVShows = () => {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYWJhZjYzOGNjMWNiODIwYjEwNmQ3OTRhZDAyZTgyOCIsIm5iZiI6MTc1MjA3NTYwMS4xMTYsInN1YiI6IjY2NmU4ZDUxYTA5ZjRmMDYwZjZlOTI4NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HYfcIGONBWkXGqrNEwHn42At7opgJXOp4Gb6dLpTGSk'
+        Authorization: `Bearer ${TMDB_BEARER}`
       }
     })
       .then(res => res.json())

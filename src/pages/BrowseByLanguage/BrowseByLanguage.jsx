@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../ThemedPage.css';
 
+const TMDB_BEARER = import.meta.env.VITE_TMDB_BEARER;
+
 const LANGUAGES = [
   { code: 'en', label: 'English' },
   { code: 'hi', label: 'Hindi' },
@@ -26,14 +28,14 @@ const BrowseByLanguage = () => {
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYWJhZjYzOGNjMWNiODIwYjEwNmQ3OTRhZDAyZTgyOCIsIm5iZiI6MTc1MjA3NTYwMS4xMTYsInN1YiI6IjY2NmU4ZDUxYTA5ZjRmMDYwZjZlOTI4NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HYfcIGONBWkXGqrNEwHn42At7opgJXOp4Gb6dLpTGSk'
+          Authorization: `Bearer ${TMDB_BEARER}`
         }
       }).then(res => res.json()),
       fetch(`https://api.themoviedb.org/3/discover/tv?with_original_language=${language}&language=en-US&page=1`, {
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYWJhZjYzOGNjMWNiODIwYjEwNmQ3OTRhZDAyZTgyOCIsIm5iZiI6MTc1MjA3NTYwMS4xMTYsInN1YiI6IjY2NmU4ZDUxYTA5ZjRmMDYwZjZlOTI4NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HYfcIGONBWkXGqrNEwHn42At7opgJXOp4Gb6dLpTGSk'
+          Authorization: `Bearer ${TMDB_BEARER}`
         }
       }).then(res => res.json())
     ])

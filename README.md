@@ -67,7 +67,18 @@ netClone/
 
 ## Screenshots
 
+<<<<<<< HEAD
 > _Add screenshots of your Home, Movies, and My List pages here_
+=======
+### Home Page
+![Home Page](./public/screenshots/home.png)
+
+### Movies Page
+![Movies Page](./public/screenshots/movies.png)
+
+### My List Page
+![My List Page](./public/screenshots/mylist.png)
+>>>>>>> 3edac11 (Update components and pages, add screenshots)
 
 ## Credits
 - [TMDB API](https://www.themoviedb.org/documentation/api)
