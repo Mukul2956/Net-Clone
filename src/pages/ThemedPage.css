@@ -1,0 +1,85 @@
+.themed-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #141414;
+  color: #fff;
+  font-family: 'Netflix Sans', Arial, Helvetica, sans-serif;
+  padding-top: 60px;
+}
+.themed-page h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.themed-page h2 {
+  font-size: 2rem;
+  margin: 1.5em 0 0.5em 0;
+  font-weight: 600;
+}
+.themed-page p {
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+
+.movie-thumb, .tv-thumb {
+  width: 240px;
+  background: #181818;
+  border-radius: 8px;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.25s cubic-bezier(.21,.6,.35,1), box-shadow 0.25s;
+  margin-bottom: 8px;
+}
+.movie-thumb:hover, .tv-thumb:hover {
+  transform: scale(1.12) translateY(-8px);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+  z-index: 2;
+}
+.movie-thumb img, .tv-thumb img {
+  width: 240px;
+  border-radius: 8px 8px 0 0;
+  display: block;
+  height: 360px;
+  object-fit: cover;
+}
+.movie-thumb .thumb-title, .tv-thumb .thumb-title {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  background: linear-gradient(0deg, rgba(20,20,20,0.95) 60%, transparent 100%);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px 8px 8px 8px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+.movie-thumb:hover .thumb-title, .tv-thumb:hover .thumb-title {
+  opacity: 1;
+}
+@media (max-width: 800px) {
+  .movie-thumb, .tv-thumb {
+    width: 200px;
+  }
+  .movie-thumb img, .tv-thumb img {
+    width: 200px;
+    height: 300px;
+  }
+}
+@media (max-width: 500px) {
+  .movie-thumb, .tv-thumb {
+    width: 140px;
+  }
+  .movie-thumb img, .tv-thumb img {
+    width: 140px;
+    height: 210px;
+  }
+}
