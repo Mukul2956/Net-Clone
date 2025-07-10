@@ -15,9 +15,6 @@ A beautiful, responsive Netflix clone built with React, Vite, and Firebase. Stre
 - 🛡️ **Authentication**: Secure login/signup with Firebase Auth
 - 🗄️ **Backend**: My List and user data stored in Firebase Firestore
 
-## Demo
-
-> _Add a link to your deployed site or a demo video here_
 
 ## Getting Started
 
