@@ -74,6 +74,9 @@ netClone/
 ![My List Page](./public/screenshots/mylist.png)
 >>>>>>> 3edac11 (Update components and pages, add screenshots)
 
+### Login Page
+![Login Page](./public/screenshots/login.png)
+
 ## Credits
 - [TMDB API](https://www.themoviedb.org/documentation/api)
 - [Firebase](https://firebase.google.com/)
